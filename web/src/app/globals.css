@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #f0f4f8;
+  --color-foreground: #1a202c;
+  --color-primary: #2563eb; /* blue-600 */
+  --color-accent: #f59e0b;  /* amber-500 */
+  --color-card: #ffffff;
+  --color-muted: #e5e7eb; /* gray-200 */
+  --color-border: #d1d5db; /* gray-300 */
+  --color-success: #10b981; /* emerald-500 */
+  --color-warning: #fbbf24; /* amber-400 */
+  --radius: 0.5rem;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Subtle gradient background for depth */
+body {
+  background: linear-gradient(135deg, var(--color-background) 0%, #e2e8f0 100%);
+  font-family: var(--font-roboto), system-ui, sans-serif;
+}
+
+/* Card base styling */
+.card {
+  @apply bg-card rounded-radius shadow-shadow p-4;
+}
+
+/* Smooth transition for interactive elements */
+* {
+  @apply transition-colors duration-200 ease-in-out;
+}
